@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  mysqldb:
+    container_name: mysqldb6
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: employeedb
+    networks:
+      springboot-mysql-net:
+
+networks:
+  springboot-mysql-net:
